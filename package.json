@@ -1,6 +1,6 @@
 {
   "name": "botmaster-session-ware-redis-store",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Redis store adapter for the botmaster session ware",
   "main": "./lib/index.js",
   "scripts": {
