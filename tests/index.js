@@ -44,17 +44,19 @@ test('Works as expected when settings are correctly setup', (t) => {
         const object = {
           some: 'object',
           that: {
-            shouldBe: 'same',
+            shouldBe: 'sameAgain',
           },
         };
-        if (pass === 0) {
+        pass += 1;
+        if (pass === 1) {
           t.falsy(update.session.object);
           update.session.object = object;
-          pass += 1;
           bot.reply(update, 'hi there');
-        } else if (pass === 1) {
+        } else if (pass === 2) {
           t.deepEqual(update.session.object, object);
-          resolve();
+          // clear state in redis
+          update.session = null;
+          bot.reply(update, 'hi again');
         }
       },
     });
@@ -70,7 +72,11 @@ test('Works as expected when settings are correctly setup', (t) => {
     }, {
       type: 'outgoing',
       controller: async () => {
-        request(t.context.baseRequestOptions);
+        if (pass === 1) {
+          request(t.context.baseRequestOptions);
+        } else {
+          resolve();
+        }
       },
     });
 
