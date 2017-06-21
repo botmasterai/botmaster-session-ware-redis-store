@@ -1,8 +1,8 @@
 ## Botmaster Session Ware Redis Store
 
-[![Build Status](https://travis-ci.org/botmasterai/botmaster-watson-conversation-ware.svg?branch=master)](https://travis-ci.org/botmasterai/botmaster-watson-conversation-ware)
-[![Coverage Status](https://coveralls.io/repos/github/botmasterai/botmaster-watson-conversation-ware/badge.svg?branch=master)](https://coveralls.io/github/botmasterai/botmaster-watson-conversation-ware?branch=master)
-[![npm-version](https://img.shields.io/npm/v/botmaster-watson-conversation-ware.svg)](https://www.npmjs.com/package/botmaster-watson-conversation-ware)
+[![Build Status](https://travis-ci.org/botmasterai/botmaster-session-ware-redis-store.svg?branch=master)](https://travis-ci.org/botmasterai/botmaster-session-ware-redis-store)
+[![Coverage Status](https://coveralls.io/repos/github/botmasterai/botmaster-session-ware-redis-store/badge.svg?branch=master)](https://coveralls.io/github/botmasterai/botmaster-session-ware-redis-store?branch=master)
+[![npm-version](https://img.shields.io/npm/v/botmaster-session-ware-redis-store.svg)](https://www.npmjs.com/package/botmaster-session-ware-redis-store)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
 
 This is the Redis store adapter for the botmaster-session-ware middleware.
