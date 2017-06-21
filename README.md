@@ -5,7 +5,7 @@
 [![npm-version](https://img.shields.io/npm/v/botmaster-watson-conversation-ware.svg)](https://www.npmjs.com/package/botmaster-watson-conversation-ware)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg?maxAge=2592000)](LICENSE)
 
-This is the Redis store adapter for the botmaster-session-ware middleware. Using is 
+This is the Redis store adapter for the botmaster-session-ware middleware.
 
 ## Install
 
@@ -69,7 +69,7 @@ botmaster.use({
 
 // This will make our context persist throughout different messages from the
 // same user
-const sessionWare = new SessionWare({ adapter: new RedisStore() });
+const sessionWare = new SessionWare({ adapter: new SessionWareRedisStore() });
 botmaster.useWrapped(sessionWare.incoming, sessionWare.outgoing);
 ```
 
