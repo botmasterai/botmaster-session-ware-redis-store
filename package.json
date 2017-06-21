@@ -23,7 +23,7 @@
     "failFast": false,
     "tap": false,
     "powerAssert": false,
-    "timeout": "4s"
+    "timeout": "8s"
   },
   "nyc": {
     "check-coverage": false,
