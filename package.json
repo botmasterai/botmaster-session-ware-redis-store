@@ -1,0 +1,82 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "Redis store adapter for the botmaster session ware",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "export NODE_ENV=test; nyc --reporter=lcov --reporter=html ava; nyc report",
+    "test-debug": "export NODE_ENV=test DEBUG=botmaster:*; nyc --reporter=lcov --reporter=html ava",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "postversion": "git push && git push --tags && rm -rf build/temp",
+    "docs": "documentation readme lib --section=\"API\"",
+    "report": "nyc report"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.js"
+    ],
+    "source": [],
+    "match": [],
+    "serial": true,
+    "verbose": true,
+    "failFast": false,
+    "tap": false,
+    "powerAssert": false,
+    "timeout": "4s"
+  },
+  "nyc": {
+    "check-coverage": false,
+    "lines": 100,
+    "statements": 100,
+    "functions": 100,
+    "branches": 100,
+    "exclude": [
+      "tests"
+    ]
+  },
+  "keywords": [
+    "bot",
+    "botmaster",
+    "redis",
+    "redis-store",
+    "middleware"
+  ],
+  "repository": "https://github.com/botmasterai/botmaster-session-ware-redis-store",
+  "author": "John-David Wuarin <john.dwuarin@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/botmasterai/botmaster-session-ware-redis-store/issues"
+  },
+  "engines": {
+    "node": ">=4.x.x"
+  },
+  "peerDependencies": {
+    "botmaster": "^3.0.8",
+    "botmaster-session-ware": "^1.1.0"
+  },
+  "devDependencies": {
+    "ava": "^0.19.1",
+    "body-parser": "^1.17.2",
+    "botmaster": "^3.1.1",
+    "botmaster-session-ware": "^1.1.0",
+    "botmaster-test-fixtures": "^2.1.0",
+    "coveralls": "^2.13.1",
+    "documentation": "^4.0.0-rc.1",
+    "eslint": "3.19.0",
+    "eslint-config-airbnb": "^15.0.1",
+    "eslint-plugin-ava": "^4.2.1",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-plugin-jsx-a11y": "^5.0.3",
+    "eslint-plugin-react": "^7.1.0",
+    "express": "^4.15.3",
+    "koa": "2.0.1",
+    "nock": "^9.0.13",
+    "nyc": "^11.0.2",
+    "request-promise": "^4.2.1"
+  },
+  "dependencies": {
+    "debug": "^2.6.8",
+    "ioredis": "^3.1.1",
+    "watson-developer-cloud": "^2.32.1"
+  }
+}
